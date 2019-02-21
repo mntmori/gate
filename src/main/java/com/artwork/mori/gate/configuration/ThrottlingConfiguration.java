@@ -38,6 +38,7 @@ public class ThrottlingConfiguration {
         return TokenBuckets
                 .builder()
                 .withCapacity(TOKEN_CAPACITY)
+                .withFixedIntervalRefillStrategy(REFILL_TOKENS, REFILL_PERIOD, REFILL_UNIT)
                 .withBusyWaitSleepStrategy()
                 .withInitialTokens(REFILL_TOKENS)
                 .build();
@@ -52,6 +53,7 @@ public class ThrottlingConfiguration {
         return TokenBuckets
                 .builder()
                 .withCapacity(TOKEN_CAPACITY)
+                .withFixedIntervalRefillStrategy(REFILL_TOKENS, REFILL_PERIOD, REFILL_UNIT)
                 .withYieldingSleepStrategy()
                 .withInitialTokens(REFILL_TOKENS)
                 .build();
