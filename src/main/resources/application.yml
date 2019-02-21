@@ -1,0 +1,11 @@
+#Application
+gateway:
+  security:
+    service-endpoint: http://localhost:8081
+
+#Spring
+server:
+  port: 8080
+spring:
+  application:
+    name: gate

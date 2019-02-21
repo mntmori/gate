@@ -1,5 +1,6 @@
 package com.artwork.mori.gate.filters;
 
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.isomorphism.util.TokenBucket;
 import org.slf4j.Logger;
@@ -11,6 +12,7 @@ import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
 @Slf4j
+@Getter
 public class ThrottleGatewayFilter implements GatewayFilter {
 
     Logger logger = LoggerFactory.getLogger(ThrottleGatewayFilter.class);
